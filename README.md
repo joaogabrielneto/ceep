@@ -20,10 +20,12 @@ Neste projeto o foco é trabalhar com JavaScript, portanto todo o HTML e CSS des
 - document.createElement('') // cria o elemento informado
 
 - .innerHTML =  // acessa o elemento indicado e adiciona conteudo
+- .target // adquire o elemento alvo do evento
+
 - .addEventListener('', ) // método para esperar uma ação em determinado objeto ('ação', o que fazer)
 - .classList // permite manipular a classe CSS de um elemento no DOM
 - .parentElement // adquire o elemento pai do elemento informado
 - .appendChild() // inclui elemento filho em um elemento pai
 - .removeChild(elemento) // Remove um nó da árvore
 - .replaceChild( elemento1, elemento2) // Substitui o nó elemento 1 pelo nó elemento2
-- .target // adquire o elemento alvo do evento
+- .remove // remove este nó da árvore
