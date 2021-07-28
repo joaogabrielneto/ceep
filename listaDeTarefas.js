@@ -1,42 +1,63 @@
-const criarTarefa = (evento) => {
-    evento.preventDefault();
+( () => {
+    const criarTarefa = (evento) => {
+        //o formulário não recarrega a página
+        evento.preventDefault();
 
-    const lista = document.querySelector('[data-list]');
-    const novoInput = document.querySelector('[data-form-input]');
-    const valor = novoInput.value;
+        //adquire o <ul> da página
+        const lista = document.querySelector('[data-list]');
 
-    const tarefa = document.createElement('li');
-    tarefa.classList.add('task')
-    
-    const conteudo = `<p class="content">${valor}</p>`;
-    
-    tarefa.innerHTML = conteudo;
-    tarefa.appendChild(BotaoConclui());
+        //adquire o <input>
+        const novoInput = document.querySelector('[data-form-input]');
+        //adquire o valor do <input>
+        const valor = novoInput.value;
 
-    lista.appendChild(tarefa);
+        //cria uma <li> no DOM
+        const tarefa = document.createElement('li');
+        //adiciona a classe 'task' na <li>
+        tarefa.classList.add('task')
+        
+        //adquire um <p> como conteúdo
+        const conteudo = `<p class="content">${valor}</p>`;
+        //inclui o <p> como conteúdo da <li>
+        tarefa.innerHTML = conteudo;
+        //concatena o <button> criado no método BotaoConclui() no conteúdo da <li>
+        tarefa.appendChild(BotaoConclui());
 
-    novoInput.value = '';
-}
+        //concatena a <li> no <ul>
+        lista.appendChild(tarefa);
 
-const novaTarefa = document.querySelector('[data-form-button]');
+        //limpa valor do <input>
+        novoInput.value = '';
+    }
 
-novaTarefa.addEventListener('click', criarTarefa);
+    //adquire o <button> NOVO ITEM
+    const novaTarefa = document.querySelector('[data-form-button]');
+    //espera evento 'click' no <button>
+    novaTarefa.addEventListener('click', criarTarefa);
 
-const BotaoConclui = () => {
-    const botaoConclui = document.createElement('button');
+    //cria o botão de concluir
+    const BotaoConclui = () => {
+        //cria um <button> no DOM
+        const botaoConclui = document.createElement('button');
+        //inclui classe CSS 'check-button' no <button> da <li>
+        botaoConclui.classList.add('check-button');
+        //inclui o texto 'concluir' no <button> da <li>
+        botaoConclui.innerText = 'concluir'
+        //espera evento 'click' no <button>
+        botaoConclui.addEventListener('click', concluirTarefa);
 
-    botaoConclui.classList.add('check-button');
-    botaoConclui.innerText = 'concluir'
+        //retorna o botão
+        return botaoConclui;
+    }
 
-    botaoConclui.addEventListener('click', concluirTarefa);
 
-    return botaoConclui;
-}
-
-const concluirTarefa = (evento) => {
-    const botaoConclui = evento.target
-
-    const tarefaCompleta = botaoConclui.parentElement
-
-    tarefaCompleta.classList.toggle('done')
-}
+    //risca a tarefa
+    const concluirTarefa = (evento) => {
+        //adquite o alvo do evento
+        const botaoConclui = evento.target
+        //adquire o elemento pai do alvo do evento
+        const tarefaCompleta = botaoConclui.parentElement
+        //verifica se o elemento pai do alvo tem a classe CSS 'done', se não ele inclui, se sim retira
+        tarefaCompleta.classList.toggle('done')
+    }
+})()
