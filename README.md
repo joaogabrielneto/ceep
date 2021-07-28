@@ -27,5 +27,5 @@ Neste projeto o foco é trabalhar com JavaScript, portanto todo o HTML e CSS des
 - .parentElement // adquire o elemento pai do elemento informado
 - .appendChild() // inclui elemento filho em um elemento pai
 - .removeChild(elemento) // Remove um nó da árvore
-- .replaceChild( elemento1, elemento2) // Substitui o nó elemento 1 pelo nó elemento2
+- .replaceChild( elemento1, elemento2) // Substitui o nó elemento1 pelo nó elemento2
 - .remove // remove este nó da árvore
