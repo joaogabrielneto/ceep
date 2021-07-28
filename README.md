@@ -24,3 +24,10 @@ Neste projeto o foco é trabalhar com JavaScript, portanto a maior parte do HTML
 - const // cria uma constante (é possível criar uma constante que recebe uma função)
 - .addEventListener('', ) // método para esperar uma ação em determinado objeto
 - data attributes: https://cursos.alura.com.br/data-attributes-do-html5-c109
+- template string: `` // interpolar HTML com JavaScript, ao utiliza algum scrip usar ${}
+- innerHTML =  // acessa o seletor indicado e adiciona conteudo
+- document.createElement('') // cria o elemento informado
+- appendChild() // inclui elemento filho em um elemento pai
+- classList.add('') ou classList.remove('') // adiciona ou remove uma classe a um elemento no DOM
+- replaceChild( elemento1, elemento2) // Substitui o nó elemento 1 pelo nó elemento2.
+- removeChild(elemento) // Remove um nó da árvore
