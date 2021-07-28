@@ -28,6 +28,8 @@ Neste projeto o foco é trabalhar com JavaScript, portanto a maior parte do HTML
 - innerHTML =  // acessa o seletor indicado e adiciona conteudo
 - document.createElement('') // cria o elemento informado
 - appendChild() // inclui elemento filho em um elemento pai
-- classList.add('') ou classList.remove('') // adiciona ou remove uma classe a um elemento no DOM
+- .classList // permite manipular a classe CSS de um elemento no DOM
 - replaceChild( elemento1, elemento2) // Substitui o nó elemento 1 pelo nó elemento2.
 - removeChild(elemento) // Remove um nó da árvore
+- .target // adquire o elemento alvo do evento
+- .parentElement // adquire o elemento pai do elemento informado
