@@ -5,6 +5,15 @@ Este repositório consiste de um estudo em JavaScript. Este projeto foi desenvol
 Neste projeto o foco é trabalhar com JavaScript, portanto todo o HTML e CSS deste repositório vem dos arquivos iniciais do curso e pelos exemplos do instrutor, o único código escrito e explicado durante o curso foram os scrips do arquivo "listaDeTarefas.js".
 
 
+# COMO RODAR LOCALMENTE
+
+<!--ts-->
+ * [Clone este repositório: git clone git@github.com:joaogabrielneto/ceep.git] 
+ * [Instale o Live Server]
+    * [Com o npm, instale o Liver Server com " npm -g install live-server " e execute-o na pasta do projeto]
+    * [Ou se usar o VSCode, instale a extenção Live Server do autor Ritwick Dey, execute a extenção]
+<!--te-->
+
 # CONCEITOS, MÉTODOS E PALAVRAS RESERVADAS APRENDIDOS AO LONGO DESTE CURSO
 
 - const // cria uma constante (é possível criar uma constante que recebe uma função)
